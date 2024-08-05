@@ -24,8 +24,6 @@
 * 단일 IP 주소에서 여러 서비스를 동시에 실행하거나 식별의 용이성을 위해 존재
 * HTTP:80, HTTPS:443 등 정해진 포트가 있음
 
-## ○ 참고사진
-
 TCP/IP 패킷 정보
 
 <img src="/posts/img/pa1.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="pa1"></img><br/>
@@ -33,7 +31,6 @@ TCP/IP 패킷 정보
 3 way handshake
 
 <img src="/posts/img/3way.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="3way"></img><br/>
-
 
 
 ## 3. DNS
