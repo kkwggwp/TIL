@@ -3,14 +3,17 @@
 
 # 1. HTTP와 HTTPS
 ## 1.1. HTTP
-* 예시: http://www.google.com:80/app/index.html
-* 프로토콜: HTTP
-* Host (도메인): www.google.com
-* Port 번호: 80
-* URI: /app/index.html
+* Port : 80
+* 평문으로 통신, 데이터 변조 가능성
+	http://www.google.com:80
 
-## 1.2. 마크다운의 장-단점
+## 1.2. HTTPS
+* Port : 443
+* Secure
+	https://www.google.com:443
+
 ### 1.2.1. 장점
+
 	1. 간결하다.
 	2. 별도의 도구없이 작성가능하다.
 	3. 다양한 형태로 변환이 가능하다.
