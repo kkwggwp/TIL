@@ -35,7 +35,7 @@ TCP/IP 패킷 정보
 
 ## 3. DNS/URI/URL
 ### 3.1 DNS
-* 외우기 힘든 IP 주소를 대신함
+* 외우기 힘든 IP 주소를 대신함 (223.130.195.95 -> naver.com)
 * DNS 서버와 통신해 IP 주소와 변환
 ### 3.2 URI
 * URL (locator) + URN (name) = URI
