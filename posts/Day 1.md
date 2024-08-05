@@ -72,25 +72,25 @@ https://www.google.com/search?q=calendar&oq=calendar&sourceid=chrome&ie=UTF-8
 
 ## 5. HTTP 상태코드
 
-### 5.1 1xx : 정보(Information) : 요청을 받아들여 처리중
-### 5.2 2xx : 성공(Successful) : 요청을 정상적으로 처리했음
+### 1xx : 정보(Information) : 요청을 받아들여 처리중
+### 2xx : 성공(Successful) : 요청을 정상적으로 처리했음
 ```
 200 OK (클라이언트가 보낸 요청을 서버가 정상 처리했음)
 201 Created (클라이언트 요청이 성공적으로 처리되어 리소스가 만들어졌을 때 응답)
 204 No Content (요청이 성공적으로 처리되었으나 돌려줄 리소스가 없음)
 ```
-### 5.3 3xx : 리다이렉트(Redirection) : 요청을 완료하기 위해서 추가 동작이 필요
+### 3xx : 리다이렉트(Redirection) : 요청을 완료하기 위해서 추가 동작이 필요
 ```
 301 Moved Permanently (요청으로 들어온 URI가 새것이 아닐 경우, 다른 URI로 연결해달라는 응답)
 ```
-### 5.4 4xx : 클라이언트 오류(Client Error) : 서버는 요청을 이해 불가능
+### 4xx : 클라이언트 오류(Client Error) : 서버는 요청을 이해 불가능
 ```
 400 Bad Request (잘못된 요청 구문 및 파라미터)
 401 Unauthorized (인증 정보 필요)
 403 Forbidden (액세스 거부)
 404 Not Found (리소스 없음)
 ```
-### 5.5 5xx : 서버 오류(Server Error) : 서버는 요청을 처리 실패
+### 5xx : 서버 오류(Server Error) : 서버는 요청을 처리 실패
 ```
 500 Internal Server Error (서버에서 요청 처리중 에러 또는 웹 애플리케이션에 에러)
 503 Service Unavailable (서버 과부화 또는 점검중)
