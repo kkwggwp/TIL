@@ -1,19 +1,14 @@
 네트워크 기초
 ======================
 
-# 1. HTTP와 HTTPS
-## 1.1. HTTP
-* Port : 80
-* 평문으로 통신, 데이터 변조 가능성
-```
-	http://www.google.com:80
-```
-## 1.2. HTTPS
-* Port : 443
-* Secure
-```
-	https://www.google.com:443
-```
+## 1. HTTP
+	1. Port : 80
+	2. 평문으로 통신, 데이터 변조 가능성
+
+## 2. HTTPS
+	1. Port : 443
+	2. HTTP에 암호화, 인증기능 추가
+
 ### 1.2.1. 장점
 	dsfsdf
 	1. 간결하다.
