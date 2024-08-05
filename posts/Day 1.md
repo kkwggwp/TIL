@@ -40,8 +40,7 @@ TCP/IP 패킷 정보
 
 ## 4. URL, URI
 ### 4.1 URI
-URI = URL (locator) + URN (name)
-
+* URL (locator) + URN (name) = URI
 ### 4.2 URL
 ```
 https://www.google.com/search?q=calendar&oq=calendar&sourceid=chrome&ie=UTF-8
