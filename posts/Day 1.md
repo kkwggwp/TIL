@@ -26,11 +26,11 @@
 
 ## ○ 참고사진
 
-*TCP/IP 패킷 정보
+TCP/IP 패킷 정보
 
 <img src="/posts/img/pa1.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="pa1"></img><br/>
 
-*3 way handshake
+3 way handshake
 
 <img src="/posts/img/3way.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="3way"></img><br/>
 
