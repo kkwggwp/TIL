@@ -8,31 +8,31 @@
 * HTTP에 암호화, 인증기능 추가
 
 ### 2. OSI 7 Layer
-1. 물리계층 (Physical Layer):
+## 1. 물리계층 (Physical Layer):
 * 전기적, 기계적 특징을 사용하여 데이터를 비트 단위(0, 1)로 전송
 * 케이블, 리피터 등
 
-2. 데이터 링크 계층 (Data Link Layer):
+## 2. 데이터 링크 계층 (Data Link Layer):
 * 안전한 데이터 전송을 위해 프레임에 MAC 주소 부여, 에러 검출 및 흐름 제어 수행
 * 브릿지, 스위치 등
 
-3. 네트워크 계층 (Network Layer):
+## 3. 네트워크 계층 (Network Layer):
 * 데이터 패킷을 목적지까지 안전하고 효율적으로 전달, 라우터를 통해 경로 선택
 * 패킷에 IP 헤더 추가
 
-4. 전송 계층 (Transport Layer):
+## 4. 전송 계층 (Transport Layer):
 * 신뢰성 있는 데이터 전송 보장
 * 포트 번호와 전송 방식(TCP/UDP) 결정
 * 데이터 단위에 TCP 헤더 추가
 
-5. 세션 계층 (Session Layer):
+## 5. 세션 계층 (Session Layer):
 * 통신 세션을 설정하고 유지. 두 지점 간의 연결 관리
 
-6. 표현 계층 (Presentation Layer):
+## 6. 표현 계층 (Presentation Layer):
 * 데이터의 표현 방식 결정. 암호화, 인코딩 등의 작업 수행
 * JPEG, MPEG, ASCII 등
 
-7. 응용 계층 (Application Layer):
+## 7. 응용 계층 (Application Layer):
 * 최종 응용 서비스 제공
 * HTTP, FTP, SMTP 등과 같은 프로토콜을 포함
 * 웹 브라우저 같은 사용자와 직접 상호작용하는 계층
