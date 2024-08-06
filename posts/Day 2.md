@@ -1,9 +1,11 @@
 Git, Github
 ======================
 ## 1. Git
+* git add    파일 추가
+* git add .  모든 파일 추가
 * git status 변경사항 확인
-* git add 파일 추가
-* git add . 모든 파일 추가
+* git log    로그 확인
+* git diff   파일이 어떤 내용으로 추가 혹은 변경되었는지 확인
 
 git commit
 -------
@@ -16,3 +18,12 @@ git commit
 |저장하고 종료|:wq|압력한 것 있을 때 사용|
 |위로 스크롤|k|git log등에서 내역이 길 때 사용|
 |아래로 스크롤|j|git log등에서 내역이 길 때 사용|
+
+* init commit            입력 후 저장하고 종료
+* git commit -m "메시지"  커밋 메시지 작성
+* git commit -am "메시지" 모든 변경된 파일 스테이징과 커밋 메시지 작성 
+  ㄴ새 파일은 갱신이 안되므로 git add를 사용하자!
+
+## 2. Git 과거로 돌리기
+* reset  : 원하는 시점으로 돌아간 뒤 이후 내역 삭제
+* revert : 되돌리기를 원하는 시점의 커밋을 거꾸로 실행
