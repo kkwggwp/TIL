@@ -1,4 +1,4 @@
-Git, Github
+Git/Github
 ======================
 ## 1. Git
 >git add
