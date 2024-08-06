@@ -2,14 +2,19 @@ Git, Github
 ======================
 ## 1. Git
 * git add
+
 파일 추가
 * git add .
+
 모든 파일 추가
 * git status
+
 변경사항 확인
 * git log
+
 로그 확인
 * git diff
+
 파일이 어떤 내용으로 추가 혹은 변경되었는지 확인
 
 git commit
