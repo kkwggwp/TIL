@@ -1,16 +1,16 @@
 Git, Github
 ======================
 ## 1. Git
-* git add
->파일 추가
-* git add .
->모든 파일 추가
-* git status
->변경사항 확인
-* git log
->로그 확인
-* git diff
->파일이 어떤 내용으로 추가 혹은 변경되었는지 확인
+>git add
+* 파일 추가
+>git add .
+* 모든 파일 추가
+>git status
+* 변경사항 확인
+>git log
+* 로그 확인
+>git diff
+* 파일이 어떤 내용으로 추가 혹은 변경되었는지 확인
 
 git commit
 -------
@@ -24,12 +24,12 @@ git commit
 |위로 스크롤|k|git log등에서 내역이 길 때 사용|
 |아래로 스크롤|j|git log등에서 내역이 길 때 사용|
 
-* init commit           
->입력 후 저장하고 종료
-* git commit -m "메시지"
->커밋 메시지 작성
-* git commit -am "메시지"
->모든 변경된 파일 스테이징과 커밋 메시지 작성
+>init commit           
+* 입력 후 저장하고 종료
+>git commit -m "메시지"
+* 커밋 메시지 작성
+>git commit -am "메시지"
+* 모든 변경된 파일 스테이징과 커밋 메시지 작성
 
 >새 파일은 갱신이 안되므로 git add를 사용하자!
 
@@ -43,19 +43,19 @@ git commit
 * 여러 작업들이 각각 독립되어 진행될 때
 
 ### 3.1 브랜치 생성/이동/삭제
-* git branch '브랜치명'    
->브랜치 생성
-* git branch              
->브랜치 목록 확인
-* git switch '브랜치명'    
->브랜치로 이동
-* git switch -c '브랜치명' 
->브랜치로 생성과 이동
-* git branch -d '브랜치명' 
->브랜치 삭제
-* git branch -D '브랜치명' 
->브랜치 강제 삭제
-* git log --'명령어' 
+>git branch '브랜치명'    
+* 브랜치 생성
+>git branch              
+* 브랜치 목록 확인
+>git switch '브랜치명'    
+* 브랜치로 이동
+>git switch -c '브랜치명' 
+* 브랜치로 생성과 이동
+>git branch -d '브랜치명' 
+* 브랜치 삭제
+>git branch -D '브랜치명' 
+* 브랜치 강제 삭제
+>git log --'명령어' 
 ```
 --all      모든 브랜치의 커밋 로그 포함
 --decorate 브랜치와 같은 참조 정보를 로그에 표시
@@ -88,4 +88,6 @@ git rebase main
 * Merge는 브랜치의 히스토리를 보존하면서 두 브랜치를 통합합니다. 커밋 히스토리가 복잡해질 수 있지만, 변경 이력을 명확히 추적할 수 있음
 * Rebase는 브랜치를 최신 상태로 업데이트하면서 깔끔한 히스토리를 유지함. 그러나 브랜치의 히스토리가 변경되므로 주의 요구
 
-## 
+## 4. Github
+>git push
+>git pull
