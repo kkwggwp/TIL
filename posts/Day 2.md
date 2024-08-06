@@ -21,7 +21,8 @@ git commit
 
 * init commit            입력 후 저장하고 종료
 * git commit -m "메시지"  커밋 메시지 작성
-* git commit -am "메시지" 모든 변경된 파일 스테이징과 커밋 메시지 작성 
+* git commit -am "메시지" 모든 변경된 파일 스테이징과 커밋 메시지 작성
+
   ㄴ새 파일은 갱신이 안되므로 git add를 사용하자!
 
 ## 2. Git 과거로 돌리기
