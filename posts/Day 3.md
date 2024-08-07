@@ -15,10 +15,10 @@ HTML/CSS
 </html>
 ```
 
-### 1.1 <!DOCTYPE html>
+### 1.1 '<!DOCTYPE html>'
 * html living standard 문서 유형 선언
 
-### 1.2 <html lang="en">
+### 1.2 '<html lang="en">'
 * html 문서의 루트, 최상단 요소
 * lang 속성으로 페이지 주 언어 설정
 
