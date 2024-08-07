@@ -339,10 +339,10 @@ html
 </html>
 ```
 ### 9.1 Parent, Child, Sibling, Descendant 요소
-* 위 예제에서 <section> 태그는 <h1>, <img>, <div> 태그의 부모 요소
-* 위 예제에서 <h1>, <img>, <div> 태그는 <section> 태그의 자식 요소
-* 위 예제에서 <h1>, <img>, <div> 태그는 서로 형제 관계에 있음
-* 위 예제에서 <strong> 태그는 <section> 태그의 자손 요소
+* 위 예제에서 `<section>` 태그는 `<h1>`, `<img>`, `<div>` 태그의 부모 요소
+* 위 예제에서 `<h1>`, `<img>`, `<div>` 태그는 `<section>` 태그의 자식 요소
+* 위 예제에서 `<h1>`, `<img>`, `<div>` 태그는 서로 형제 관계에 있음
+* 위 예제에서 `<strong>` 태그는 `<section>` 태그의 자손 요소
 
 ## 10. Forms
 ### 10.1 기본 속성
