@@ -15,10 +15,10 @@ HTML/CSS
 </html>
 ```
 
-### 1.1 '<!DOCTYPE html>'
+### 1.1 !DOCTYPE html
 * html living standard 문서 유형 선언
 
-### 1.2 '<html lang="en">'
+### 1.2 html lang="en"
 * html 문서의 루트, 최상단 요소
 * lang 속성으로 페이지 주 언어 설정
 
@@ -107,3 +107,9 @@ HTML/CSS
 * 숫자가 작을수록 중요도가 높다
 
 ### 3.2 anchor
+* 다양한 URL로 연결할 수 있는 하이퍼링크 작성
+* _self 현재 페이지에서 링크 열기(기본값)
+* _blank 새 탭에서 링크 열기
+* download 링크 클릭시 URL 다운로드 요청
+
+### 3.3 paragraph
