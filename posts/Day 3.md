@@ -364,7 +364,8 @@ html
 * action : 입력 값을 전송할 페이지를 나타냄
 * method : 폼의 데이터를 전송할 방법 정의
 
-### 11. input
+## 11. input
+### 11.1 input의 속성
 
 | 속성명       | 설명                                                        |
 |--------------|-------------------------------------------------------------|
@@ -377,3 +378,154 @@ html
 | `autofocus`  | 웹 페이지 로딩 시 이 속성이 지정된 태그로 자동으로 포커스가 이동합니다. |
 | `placeholder`| 입력할 값에 대한 힌트를 제공합니다.                         |
 | `pattern`    | 정규표현식을 사용하여 특정 범위 내의 유효한 값을 입력 받도록 합니다. |
+
+### 11.2 input의 타입
+
+| 타입       | 설명                                                    |
+|------------|---------------------------------------------------------|
+| `text`     | 입력한 텍스트를 그대로 표현해주는 `input`             |
+| `button`   | 누를 수 있는 간단한 버튼을 만드는 `input`             |
+| `password` | 마스크 처리된 텍스트를 입력받는 `input`                |
+| `search`   | 검색 창으로 사용할 수 있는 `input`                    |
+| `date`     | 날짜를 입력할 때 사용하는 `input`                     |
+| `time`     | 시간을 입력할 때 사용하는 `input`                     |
+| `range`    | 슬라이드 바 형식의 `input`                             |
+| `number`   | 수를 선택할 수 있게 하는 `input`                       |
+| `color`    | 색을 선택할 수 있는 `input`                            |
+| `radio`    | 선택 항목 중 하나만 선택 가능한 `input`               |
+| `checkbox` | 선택 항목 중 0개 이상 선택 가능한 `input`            |
+| `file`     | 파일을 업로드할 수 있는 `input`                        |
+| `email`    | 이메일 주소를 입력하게 하는 `input`                    |
+| `url`      | 웹 페이지 주소를 입력하게 하는 `input`                |
+| `tel`      | 전화번호를 입력하게 하는 `input`                       |
+
+## 12. `<label>`
+### 12.1 `<label>` 의 사용법
+1. 텍스트의 설명과 폼 입력 모드를 포함하는 방식
+```
+<label>
+  이름 :
+  <input type="text" name="name" />
+</label>
+```
+2. 폼 입력에서 분리하여 `for` 속성을 이용해 레이블을 지정하는 방식
+```
+<label for="myName">이름 : </label>
+<input type="text" name="name" id="myName" />
+```
+
+### 12.2 `for` 속성
+*레이블이 속한 `input`과 같은 폼 컨트롤을 의미
+
+## 13. `<select>`
+* 드롭다운 리스트 박스 생성. 박스 안의 아이템은 `<option>` 사용
+```
+<form action="">
+  <label for="myDevice"
+    >현재 사용하고 있는 스마트폰의 제조사를 선택해주세요</label
+  >
+  <select name="device" id="myDevice">
+    <option value="iphone">아이폰</option>
+    <option value="galaxy">갤럭시폰</option>
+    <option value="ㅜㅜ">LG폰</option>
+  </select>
+</form>
+```
+### 13.1 `<select>`의 속성들
+* `multiple="multiple"` : 여러 개의 옵션을 선택할 수 있게 함 (Windows: Ctrl 클릭, macOS: Command 클릭)
+* `size` : 드롭다운 리스트에서 한 번에 보여줄 옵션의 개수를 조절
+
+### 13.2 `<option>`의 속성들
+* `value` : 선택된 옵션의 값을 서버에 전송할 때 사용됩
+* * `selected` : 기본적으로 선택되는 옵션을 지정 `selected` 속성이 없으면 첫 번째 옵션이 기본적으로 선택됨
+
+## 14. `<fieldset>`
+* 폼 컨트롤을 그룹화하여 섹션별로 나눌 때 사용됨
+```
+<!-- 브라우저에서 어떻게 표현되는지 확인해보세요 -->
+<form action="">
+  <fieldset>
+    <legend>개인정보</legend>
+    <label for="myName">이름</label>
+    <input type="text" name="name" id="myName" />
+    <label for="myTel">전화번호</label>
+    <input type="tel" name="tel" id="myTel" />
+    <label for="myEmail">이메일</label>
+    <input type="email" name="email" id="myEmail" />
+  </fieldset>
+  <fieldset>
+    <legend>개인정보 제공 동의</legend>
+    <label for="checkAgree">개인정보 제공에 동의하십니까?</label>
+    <input type="checkbox" name="agree" id="checkAgree" />
+  </fieldset>
+</form>
+```
+## 15. `<legend>`
+* `<fieldset>`의 첫 번째 자식 요소로, 폼 그룹의 제목을 나타냄
+
+## 16. `<button>`
+* 클릭 가능한 버튼을 생성합니다. 버튼의 `type` 속성에 따라 다음과 같은 기능을 제공
+* `submit` : 폼 데이터를 서버로 제출
+* `reset` : 폼의 모든 값을 초기화
+* `button` : 클릭 가능한 버튼
+* `button`은 `input` 보다 스타일 적용하기 훨씬 수월함
+
+## 17. `<textarea>`
+* 여러 줄의 텍스트를 입력받을 수 있음
+* `cols` : 입력창의 넓이를 지정
+* `rows` : 입력 창에서 보여줄 줄 수를 지정
+```
+<textarea
+  name=""
+  id=""
+  cols="40"
+  rows="10"
+  maxlength="10"
+  minlength="5"
+></textarea>
+```
+
+## 18. `<datalist>`
+* `<input>`의 `list` 속성과 연결하여 사용하며, 기본 선택 옵션을 제공하고 사용자에게 임의의 값을 입력받을 수 있게 함
+
+## 19. HTML CheatSheet
+| 태그 이름         | 설명                                       | 구분           | 대표 속성                                     |
+|-------------------|------------------------------------------|----------------|----------------------------------------------|
+| `<html> </html>`  | HTML 문서를 만들 때 사용                    | 기본 태그      |                                              |
+| `<head> </head>`  | 제목이나 표시되지 않는 정보를 설정           | 기본 태그      |                                              |
+| `<body> </body>`  | 문서의 보이는 부분을 설정                   | 기본 태그      | bgcolor, link, text, vlink, alink            |
+| `<title> </title>`| 제목 표시줄에 들어가는 내용을 설정           | 기본 태그      |                                              |
+| `<pre> </pre>`    | 텍스트를 있는 그대로 출력                   | 글자태그       |                                              |
+| `<h1> </h1> ... <h6> </h6>` | 제목 텍스트 설정. 숫자가 작아질수록 크기가 커짐 | 글자태그       |                                              |
+| `<b> </b>`        | 텍스트를 볼드체로 만드는데 사용               | 글자태그       |                                              |
+| `<i> </i>`        | 이탤릭체 텍스트를 만드는데 사용               | 글자태그       |                                              |
+| `<tt> </tt>`      | 타자기 스타일의 텍스트를 만드는데 사용        | 글자태그       |                                              |
+| `<code> </code>`  | 모노스페이스인 소스코드를 정의하는데 사용      | 글자태그       |                                              |
+| `<cite> </cite>`  | 인용문을 표시하는데 사용                     | 글자태그       |                                              |
+| `<adress> </adress>` | 주소를 표시하는데 사용                    | 글자태그       |                                              |
+| `<em> </em>`      | 텍스트를 이탤릭체로 강조하는데 사용           | 글자태그       |                                              |
+| `<strong> </strong>` | 볼드 텍스트를 만드는데 사용                | 글자태그       |                                              |
+| `<font> </font>`  | 폰트의 크기 색상 등을 설정하는데 사용          | 글자태그       | size, color, face                            |
+| `<a>`             | 링크를 연결할 때 사용                      | 링크태그       | href, name, target                           |
+| `<p> </p>`        | 새 단락을 만들 때 사용                      | 컨텐츠 그룹 태그 |                                              |
+| `<br>`            | 줄바꿈을 넣을 때 사용                       | 컨텐츠 그룹 태그 |                                              |
+| `<blockquote> </blockquote>` | 들여쓰기를 통해서 인용문을 만들 때 사용   | 컨텐츠 그룹 태그 |                                              |
+| `<div> </div>`    | CSS로 블록 컨텐츠를 형식화 하는데 사용         | 컨텐츠 그룹 태그 |                                              |
+| `<span> </span>`  | CSS로 인라인 컨텐츠를 형식화 하는데 사용      | 컨텐츠 그룹 태그 |                                              |
+| `<ul> </ul>`      | 순서가 없는 리스트를 만듭니다                | 컨텐츠 그룹 태그 |                                              |
+| `<ol> </ol>`      | 순서가 있는 리스트를 만듭니다                | 컨텐츠 그룹 태그 | start, type                                   |
+| `<li> </li>`      | 각 리스트의 항목들을 포함합니다              | 컨텐츠 그룹 태그 |                                              |
+| `<dl> </dl>`      | 정의 목록들을 만듭니다                      | 컨텐츠 그룹 태그 |                                              |
+| `<dt> </dt>`      | 정의되는 용어의 제목을 만듭니다              | 컨텐츠 그룹 태그 |                                              |
+| `<dd> </dd>`      | 정의되는 용어의 설명을 만듭니다              | 컨텐츠 그룹 태그 |                                              |
+| `<hr>`            | 수평선을 삽입합니다                         | 미디어태그     | size, width, noshade                         |
+| `<img>`           | 이미지를 표시할 때 사용                     | 미디어태그     | src, width, height                           |
+| `<form> </form>`  | 폼을 정의하는데 사용                        | 폼 태그        | src, align, border, height, width, src       |
+| `<select> </select>` | 다양한 메뉴 형태를 만드는데 사용            | 폼 태그        | multiple, name, size                         |
+| `<option> </option>` | 각 메뉴 항목들을 배치하는데 사용            | 폼 태그        |                                              |
+| `<textarea> </textarea>` | 텍스트 박스 영역을 만드는데 사용           | 폼 태그        | name, cols, rows                             |
+| `<input>`         | 다양한 입력 양식을 만드는데 사용            | 폼 태그        | type, name, value, checked                   |
+| `<table> </table>` | 표를 만드는데 사용                           | 테이블 태그    | border, cellpadding, cellspacing, width       |
+| `<tr> </tr>`      | 표의 행들을 배치하는데 사용                  | 테이블 태그    | align, valign                                |
+| `<td> </td>`      | 표의 각 셀들을 배치하는데 사용                | 테이블 태그    | align, valign, rowspan, colspan, nowrap      |
+| `<th> </th>`      | 테이블 헤더를 배치하는데 사용                 | 테이블 태그    |                                              |
