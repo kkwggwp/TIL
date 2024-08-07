@@ -62,7 +62,7 @@ HTML/CSS
   <body></body>
 </html>
 ```
-1.4 body
+## 1.4 body
 *웹 페이지의 실제 내용
 
 ## 2. 기본 문법과 작성
