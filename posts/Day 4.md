@@ -83,3 +83,34 @@ CSS
 * 처음 레이아웃을 잡을 때 이 박스 모델을 그려보는것이 중요
 
 <img src="/posts/img/CSSbox.png" width="450px" height="300px" alt="CSSbox"></img><br/>
+```
+1. witdh : 요소 너비 설정. 입력하지 않으면 부모 요소의 너비를 기준으로 계산해 채움
+2. height : 요소 높이 설정. 입력하지 않으면 content의 높이만큼만 설정됨
+3. padding : 콘텐츠 주변의 여백을 만듬. 작성 순서는 top, rightt, bottom, left 순서
+* padding-top 처럼 사용 가능
+4. margin : 요소 주변의 여백을 만듬 사용법은 padding과 같음
+5. border
+* border-width
+* border-top-width
+* border-right-width
+* border-bottom-width
+* border-left-width
+* border-style
+* border-top-style
+* border-right-style
+* border-bottom-style
+* border-left-style
+* border-color
+* border-top-color
+* border-right-color
+* border-bottom-color
+* border-left-color
+6. box-sizing
+* 요소의 총 너비와 높이를 계산하는 방식 지정
+* content-box : 기본값. width, height에 border, padding 포함하지 않음
+* border-box: width, height에 border, padding 포함
+* width = 콘텐츠 너비 + border + padding
+7. border-radius : 요소의 모서리를 둥글게 만듬
+* border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius
+
+```
