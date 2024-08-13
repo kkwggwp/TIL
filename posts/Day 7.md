@@ -289,3 +289,308 @@ const obj = {
     age: 27,
     height: 180
 };
+```
+## 5. 코드 제어
+### 5.1 조건문
+```
+// 1. if문
+let 초록불 = false;
+
+if (초록불) {
+    console.log('횡단보도를 건넙니다.');
+} else {
+    console.log('기다립니다.');
+}
+
+if (true) {
+    console.log('실행합니다');
+}
+
+if (false) {
+    console.log('실행합니다1');
+    if (true) {
+        console.log('실행합니다2');
+    }
+}
+
+if (3 < 10) {
+    console.log('실행합니다3');
+}
+
+const value1 = 'hello'; // true 판단
+const value2 = ''; // false 판단
+const value3 = null; // false 판단
+const value4 = []; // 주의!! 빈 배열도 true 판단
+
+if (value4){
+    console.log('value1은 Truthy한 값입니다.');
+}
+
+// 한 줄의 경우 중괄호 생략 가능합니다.
+if (true) console.log('중괄호를 생략했습니다.');
+
+// if, else if, else
+let score = 91;
+let grade;
+
+if (score > 90) {
+    grade = 'A';
+} else if (score > 80) {
+    grade = 'B';
+} else if (score > 70) {
+    grade = 'C';
+} else if (score > 60) {
+    grade = 'D';
+} else {
+    grade = 'F';
+}
+
+console.log(`당신의 학점은 ${grade}입니다.`);
+
+
+// 만약 위 구문이 if문으로만 되어 있다면 무슨 문제가 있는지 확인해보세요.
+let score1 = 91;
+let grade1;
+
+if (score1 > 90) {
+    grade = 'A';
+}
+if (score1 > 80) {
+    grade = 'B';
+}
+if (score1 > 70) {
+    grade = 'C';
+}
+if (score1 > 60) {
+    grade = 'D';
+}
+console.log(`당신의 학점은 ${grade}입니다.`);
+
+// 2. switch문, break
+// break가 없으면 조건이 참일시 이후 모든 코드 실행
+let fruit = 'apple';
+switch (fruit) {
+    case 'banana':
+        console.log('바나나입니다.');
+        break;
+    case 'apple':
+        console.log('사과입니다.');
+        break;
+    case 'mango':
+        console.log('망고입니다.');
+        break;
+    default:
+        console.log('일치하는 과일이 없습니다.');
+}
+
+const attackType = '빔공격';
+
+switch (attackType) {
+    case '빔공격':
+    case '할퀴기공격':
+        console.log('10에 데미지를 입혔습니다.')
+        break;
+    case '방어막공격':
+        console.log('5에 데미지를 입혔습니다.')
+        break;
+    }
+
+switch (2) {
+    case 1:
+        console.log('월요일입니다.');
+        break;
+    case 2:
+        console.log('화요일입니다.');
+        break;
+    case 3:
+        console.log('수요일입니다.');
+        break;
+    case 4:
+        console.log('목요일입니다.');
+        break;
+    case 5:
+        console.log('금요일입니다.');
+        break;
+    default:
+        console.log('주말입니다.');
+        break;
+}
+
+switch (2) {
+    case 1:
+        console.log('월요일입니다.');
+    case 2:
+        console.log('화요일입니다.');
+    case 3:
+        console.log('수요일입니다.');
+    case 4:
+        console.log('목요일입니다.');
+    case 5:
+        console.log('금요일입니다.');
+    default:
+        console.log('주말입니다.');
+}
+```
+### 5.2 반복문
+```
+// 1. for문
+let x = 10;
+x = x + 10; // x가 반복되니 줄이고 싶다!
+x += 10; // x = x + 10; 과 같은 의미입니다.
+console.log(x);
+
+for (let i = 0; i < 10; i += 3) {
+    console.log(i);
+}
+
+/////////////////////
+
+for (let i = 2; i <= 9; i++) {
+    for (let j = 1; j <= 9; j++) {
+        console.log(`${i} x ${j} = ${i * j}`);
+    }
+}
+-------------------------------------------
+// 2. while문
+let x = 0;
+
+while (x < 10) {
+    console.log(x);
+    x++;
+}
+
+// 무한 루프
+// 메모리를 어마어마하게 많이 잡아먹습니다. 그래서 무한루프의 경우 서버가 다운되거나, 브라우저가 다운되는 경우가 있습니다.
+
+let num = 0;
+while (num <= 10) {
+    console.log(num);
+    if (num === 5) {
+        break; // num이 5일 때 반복문을 종료합니다.
+    }
+    num++;
+}
+
+let num2 = 0;
+let num3 = 0;
+while (num2 <= 10) {
+    while (num3 <= 10) {
+        console.log(num2, num3);
+        if (num3 === 5) {
+            break;
+        }
+        num3++;
+    }
+    // if (num3 === 5) {
+    //         break;
+    // }
+    num2++;
+}
+
+for (let i = 0; i < 20; i++) {
+    if (i < 13) {
+        continue; // i가 13 미만이면 아래 코드를 건너뜁니다.
+    }
+    console.log(i + '살은 청소년입니다.');
+}
+```
+### 5.3 전개 구문과 Destructuring
+```
+// 1. 전개구문
+// 배열이나 객체같은 데이터 구조를 확장하기 위해 사용
+Math.max(1, 2, 3, 4, 5); // 5
+Math.max([1, 2, 3, 4, 5]); // NaN
+
+const numbers = [1, 2, 3, 4, 5];
+Math.max(numbers); // NaN
+Math.max(...numbers); // 5
+
+const a = [1, 2, 3];
+const b = [4, 5, 6];
+const c = [...a, ...b]; // [1, 2, 3, 4, 5, 6]
+const d = [a, ...b]; // [[1, 2, 3], 4, 5, 6]
+
+
+const 과일들 = ['사과', '파인애플', '수박'];
+const 과일들2 = 과일들
+
+과일들2[0] = '포도';
+console.log(과일들); // ['포도', '파인애플', '수박']
+
+const 과일들3 = [...과일들];
+과일들3[0] = '바나나';
+console.log(과일들); // ['포도', '파인애플', '수박']
+
+const one = ['사과', '파인애플', '수박']
+const two = ['사과', '파인애플', '수박']
+console.log(one === two); // false
+
+
+const 위니브1 = { 개리: 1, 빙키: 2 };
+const 위니브2 = { 라이캣: 3 };
+const 위니브3 = { ...위니브1, ...위니브2 };
+
+console.log(위니브3);
+----------------------------------------
+// 2. 디스트럭쳐링
+// 데이터 구조를 분해하여 변수에 할당
+const [a, b, c] = [1, 2, 3];
+
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+
+// let food1, food2, food3;
+
+// const categories = { food1: '과일', food2: '채소', food3: '육류' };
+
+// food1 = categories.food1;
+// food2 = categories.food2;
+// food3 = categories.food3;
+
+// console.log(food1);
+// console.log(food2);
+// console.log(food3);
+
+const { food1, food2, food3 } = { food1: '과일', food2: '채소', food3: '육류' };
+
+console.log(food1);
+console.log(food2);
+console.log(food3);
+```
+## 6. 조금 더 깊이 들여다보기
+### 6.1 this
+```
+// this는 글로벌 기업에서도 이 코드의 사용을 주의해서 사용하거나 지양하는 경향이 있습니다.
+// this는 상황에 따라 다르게 동작할 수 있기 때문에 외워야 하는 예외 케이스가 너무 많습니다.
+// this는 '나 자신 + @'이라고 생각을 해주시면, 초급자 분들에게는 충분하다 생각합니다.
+
+console.log(this); // window
+window.alert('hello');
+this.alert('hello');
+
+function f() {
+    console.log(this); // window
+}
+f();
+
+const obj = {
+    name: 'licat',
+    f: function () {
+        console.log(this);
+    },
+};
+
+obj.f(); // obj
+
+function Person(name) {
+    this.name = name;
+    console.log(this);
+    // return this
+}
+
+const person1 = new Person('licat'); 
+// Person { name: "licat" }
+const person2 = new Person('mura');
+// Person { name: "mura" }
+```
