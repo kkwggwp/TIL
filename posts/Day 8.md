@@ -407,5 +407,5 @@ console.log(json3[1]);
 * DOM은 HTML 문서의 내용을 트리 형태로 구조화하여 웹페이지와 프로그래밍 언어를 연결시켜주는 역할
 * DOM은 웹 페이지를 조작하고 수정할 수 있게 해주는 중요한 개념
 * 각각의 요소와 속성, 콘텐츠를 표현하는 단위를 '노드(node)' 라고 함
-<img src="/posts/img/dometreecode.png" width="450px" height="300px" title="돔 트리 코드" alt="pa1"></img><br/>
-<img src="/posts/img/dometree.png" width="450px" height="300px" title="돔 트리" alt="pa1"></img><br/>
+<img src="/posts/img/domtreecode.png" width="450px" height="300px" title="돔 트리 코드" alt="domtreecode.png"></img><br/>
+<img src="/posts/img/domtree.png" width="450px" height="300px" title="돔 트리" alt="domtree.png"></img><br/>
