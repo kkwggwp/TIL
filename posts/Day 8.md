@@ -3,7 +3,9 @@ JAVASCRIPT
 ## 6. 조금 더 깊이 들여다 보기
 ### 6.1 this
 ### 6.1.1 전역 범위 호출
->console.log(this);
+```
+console.log(this);
+```
 * 전역 범위에서 this는 전역 객체이다
 * 브라우저단에서는 `window`, Node.js 환경에서는 `global` 이 전역 객체
 ```
