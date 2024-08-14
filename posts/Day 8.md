@@ -409,3 +409,109 @@ console.log(json3[1]);
 * 각각의 요소와 속성, 콘텐츠를 표현하는 단위를 '노드(node)' 라고 함
 <img src="/posts/img/domtreecode.png" width="450px" height="300px" title="돔 트리 코드" alt="domtreecode.png"></img><br/>
 <img src="/posts/img/domtree.png" width="450px" height="300px" title="돔 트리" alt="domtree.png"></img><br/>
+### 8.1.1 DOM 트리에 접근하기
+    1. getElementById : 해당 ID를 가진 요소에 접근
+    2. getElementsByTagName : 해당하는 태그 이름을 가진 모든 요소에 접근
+    3. getElementsByClassName : 해당하는 클래스를 가진 모든 요소에 접근
+    4. querySelector : CSS 선택자를 사용해 단일 요소에 접근
+    5. querySelectorAll : CSS 선택자를 사용하여 여러 요소에 접근
+```
+<body>
+    <h1 id="logo" class="title">hello world</h1>
+    <section>
+        <h2 id="section-title">HTML 1</h2>
+        <p id="contents">HTML is HyperText Markup Language. 1</p>
+    </section>
+    <section>
+        <h2 id="section-title">HTML 2</h2>
+        <p id="contents">HTML is HyperText Markup Language. 2</p>
+    </section>
+    <p class="hello">hello world</p>
+<script>
+const logo = document.getElementById('logo'); // 
+const sectionTitle = document.querySelector('#section-title'); // 
+const sectionTitleAll = document.querySelectorAll('#section-title');
+const hello = document.querySelector('.hello');
+
+console.log(logo);
+console.log(sectionTitle);
+console.log(sectionTitleAll);
+console.log(hello);
+</script>
+</body>
+```
+### 8.2 DOM 제어하기
+```
+<button class="hello">HELLO!</button>
+
+const myBtn = document.querySelector('button');
+
+// 1. 이벤트 추가
+// myBtn.addEventListener('click', () => {
+//     console.log('hello world');
+// });
+
+// 2. 클래스 제어
+// myBtn.classList.add('blue');
+myBtn.addEventListener('click', function () {
+    // myBtn.classList.add("blue"); // 클래스를 추가합니다.
+    // myBtn.classList.remove("blue"); // 클래스를 제거합니다.
+    myBtn.classList.toggle('blue'); // 클래스를 토글합니다.
+    console.log(myBtn.classList.contains('blue')); // 클래스가 있는지 확인합니다.
+});
+
+// 3. 요소 제어
+// 이 데이터는 통신을 통해 받아온 데이터 입니다.
+/*
+document.createElement(target) : target 요소를 생성
+document.createTextNode(target) : target 텍스트를 생성
+element.appendChild(target) : target 요소를 element의 자식으로 위치
+element.removeChild(target) : element의 target 자식 요소를 제거
+element.append(target) : target 요소를 element의 자식으로 위치. appendChild 와 다른점은 노드 뿐만 아니라 여러개의 노드를 한번에, 그리고 텍스트도 자식 노드로 포함시킬 수 있다는것
+target.remove() : target 요소를 제거합니다.
+*/
+1.3.1 요소 생성 및 추가
+// document.createElement() 메서드를 사용하여 새로운 요소를 생성
+// element.appendChild() 메서드를 사용하여 생성한 요소를 추가
+// element.removeChild() 메서드를 사용하여 요소를 제거
+const data = {
+    name: 'hello',
+    content: 'world',
+    price: 3000
+};
+
+const section = document.createElement('section');
+const name = document.createElement('h2');
+const content = document.createElement('p');
+const price = document.createElement('p');
+const img = document.createElement('img');
+
+// img.setAttribute('src', 'https://via.placeholder.com/300');
+img.src = 'https://via.placeholder.com/300';
+name.textContent = data.name;
+content.textContent = data.content;
+price.textContent = data.price;
+price.style.color = 'red';
+// font-size -> fontSize
+price.style.fontSize = '20px';
+
+section.appendChild(img);
+section.appendChild(name);
+section.appendChild(content);
+section.appendChild(price);
+
+// document.body.appendChild(section);
+document.body.append(section); // appendChild 와 다른점은 노드 뿐만 아니라 여러개의 노드를 한번에, 그리고 텍스트도 자식 노드로 포함시킬 수 있다는것 입니다.
+```
+추가로
+요소의 스타일을 제어하는 style 객체
+요소의 속성을 제어하는 setAttribute() 메서드
+요소의 속성을 제거하는 removeAttribute() 메서드 가 있음
+
+### 8.3 DOM의 이벤트 흐름
+* 브라우저가 이벤트 대상을 찾아갈 때는 가장 상위의 window 객체부터 document, body 순으로 DOM 트리를 따라 내려감 이를 캡처링 단계라고 합
+* 이때 이벤트 대상을 찾아가는 과정에서 브라우저는 중간에 만나는 모든 캡처링 이벤트 리스너를 실행시킴. 그리고 이벤트 대상을 찾고 캡처링이 끝나면 이제 다시 DOM 트리를 따라 올라가며 만나는 모든 버블링 이벤트 리스너를 실행함. 이를 이벤트 버블링 단계라고 함.
+* 그리고 이러한 과정에서 이벤트 리스너가 차례로 실행되는것을 이벤트 전파라고 함
+
+## 10. 비동기 프로그래밍
+### 10.1 비동기 프로그래밍과 Promise
