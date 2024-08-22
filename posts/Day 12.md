@@ -4,30 +4,68 @@ ChatGPT 무료 버전을 사용중이며, 이때까지 작성한 코드를 리�
 그 결과는 내 코드와 결과물이 완전 같지는 않아서 참고하기는 힘들었지만, 배울점이 있었던것들을 작성하기로 했다
 
 ## 1. HTML 구조 개선
-```
-<header>
-      <div id="topmenu">        
-        <a href="index.html">
-          <img src="./img/Logo-fin.png" alt="HODU"/>
-        </a>
-        <nav>
-          <ul>
-            <li class="topmenu-btn"><a href="index.html">Home</a></li>
-            <li class="topmenu-btn">About</a></li>
-            <li class="topmenu-btn">Support</a></li>
-            <li class="topmenu-btn" id="topmenu-dlbtn"><a href="">Download</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-### 6.1 this
-### 6.1.1 전역 범위 호출
 ```
 <table>
   <tr>
     <td>
       <strong>코드 A</strong>
+      <pre><code>body {  
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  margin: 0 auto;  
+}
+
+header {
+  background-color: #f2e9d8;
+}
+
+nav,
+ul {
+  display: flex;
+  align-items: center;
+}
+
+#topmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;  
+  width: 66.67%;
+  height: 102px;
+  margin: 0 auto;
+}
+
+.topmenu-btn {
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+#topmenu-dlbtn {
+  font-weight: 700;
+  padding: 15px 31px;  
+  border-radius: 40px;
+  margin-left: 49px;
+  width: 140px;
+  box-sizing: border-box; 
+  color: #fff;
+  background-color: #d97652;   
+}
+
+.dlbtn {  
+  font-weight: 700;
+  padding: 15px 31px;  
+  border-radius: 40px; 
+  width: 140px;
+  box-sizing: border-box; 
+  color: #fff;
+  background-color: #d97652;  
+}
+</code></pre>
       <pre><code>&lt;header&gt;
   &lt;div id="topmenu"&gt;        
     &lt;a href="index.html"&gt;
@@ -46,6 +84,51 @@ ChatGPT 무료 버전을 사용중이며, 이때까지 작성한 코드를 리�
     </td>
     <td>
       <strong>코드 B</strong>
+      <pre><code>body {
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #f2e9d8;
+  padding: 1rem 0;
+}
+
+#topmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#topmenu img {
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+#topmenu-dlbtn {
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: #d97652;
+  color: #fff;
+}
+</code></pre>
       <pre><code>&lt;header&gt;
   &lt;div id="topmenu"&gt;
     &lt;a href="index.html"&gt;&lt;img src="./img/Logo-fin.png" alt="HODU Logo"&gt;&lt;/a&gt;
@@ -62,4 +145,5 @@ ChatGPT 무료 버전을 사용중이며, 이때까지 작성한 코드를 리�
     </td>
   </tr>
 </table>
+
 ```
