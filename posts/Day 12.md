@@ -19,7 +19,8 @@ ChatGPT 무료 버전을 사용중이며, 이때까지 작성한 코드를 리�
         &lt;li class="topmenu-btn"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
         &lt;li class="topmenu-btn"&gt;About&lt;/a&gt;&lt;/li&gt;
         &lt;li class="topmenu-btn"&gt;Support&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="topmenu-btn" id="topmenu-dlbtn"&gt;&lt;a href=""&gt;Download&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="topmenu-btn" id="topmenu-dlbtn"&gt;
+        &lt;a href=""&gt;Download&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/nav&gt;
   &lt;/div&gt;
