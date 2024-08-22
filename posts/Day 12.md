@@ -146,26 +146,26 @@ nav a {
   </tr>
 </table>
 
-1. HTML 구조
+##1. HTML 구조
   * li에 class를 줬던 나와는 다르게 nav ul {} 로 관리해서 HTML 코드가 보기 더 깔끔해졌다 나도 nav ul{}써놓고 왜 생각을 못했을까
   * 어차피 동작하지 않을 버튼들에는 a 태그를 주지 않았던 나와 다르게 다 삽입되어있다
 
-2. body CSS
+##2. body CSS
   * body에서 width: 100%;, topmenu에서 width: 66.67%와 topmenu에서 max-width: 1200px를 준 차이가 보인다
   * 결국 뭐가 더 좋은지 모르겠어서 찾아봤더니 각각의 장점이 있고 정리하자면 body는 100% 주고 컨테이너등에서는 max-width를 적용하는게 좋다고 하는듯 하다
   * font-weight는 노멀이 400이었다 작성할 필요 없었던 것
   * line-height는 px단위보다 배수를 사용하는게 반응형 디자인에 유리함
   
-3. topmenu-btn, nav ul, nav a
+##3. topmenu-btn, nav ul, nav a
   * nav ul에 margin 대신 gap과 rem을 사용했다
   * border-box는 필요없었다
   * text-decoration: none;을 이용해 하이퍼링크 특유의 파란글씨와 밑줄을 없앴다
 
-4. dlbtn
+##4. dlbtn
   * 전체적으로 피그마와는 멀어진 값들이라 내 값을 rem으로 변환하는 정도만 하면 좋을듯 하다
   * 마찬가지로 border-box는 필요없었고, margin-left는 피그마처럼 하기에는 유지하는게 좋겠다
 
-5. topmenu
+##5. topmenu
   * height를 주지 않은 모습을 따라하려고 했으나 피그마처럼 구현하기는 힘들어서 height값을 주는 방향으로 가기로 했다
 
 이 이후로도 다듬을 것들이 있지만 비슷한 이유거나 단순 rem 변환등이라 생략하겠다</br>
