@@ -3,13 +3,48 @@
 ChatGPT 무료 버전을 사용중이며, 이때까지 작성한 코드를 리뷰하고, 구조를 개선해 달라고 말했다</br>
 그 결과는 내 코드와 결과물이 완전 같지는 않아서 참고하기는 힘들었지만, 배울점이 있었던것들을 작성하기로 했다
 
-## 1. HTML 구조 개선
-
+## 1. body와 header
 
 <table>
   <tr>
     <td>
-      <strong>코드 A</strong>
+      <strong>HTML A</strong>
+      <pre><code>&lt;header&gt;
+  &lt;div id="topmenu"&gt;        
+    &lt;a href="index.html"&gt;
+      &lt;img src="./img/Logo-fin.png" alt="HODU"/&gt;
+    &lt;/a&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li class="topmenu-btn"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="topmenu-btn"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="topmenu-btn"&gt;Support&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="topmenu-btn" id="topmenu-dlbtn"&gt;&lt;a href=""&gt;Download&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+    </td>
+    <td>
+      <strong>HTML B</strong>
+      <pre><code>&lt;header&gt;
+  &lt;div id="topmenu"&gt;
+    &lt;a href="index.html"&gt;&lt;img src="./img/Logo-fin.png" alt="HODU Logo"&gt;&lt;/a&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Support&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" id="topmenu-dlbtn"&gt;Download&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>CSS A</strong>
       <pre><code>body {  
   font-family: Pretendard, sans-serif;
   font-size: 1rem;
@@ -66,24 +101,9 @@ ul {
   background-color: #d97652;  
 }
 </code></pre>
-      <pre><code>&lt;header&gt;
-  &lt;div id="topmenu"&gt;        
-    &lt;a href="index.html"&gt;
-      &lt;img src="./img/Logo-fin.png" alt="HODU"/&gt;
-    &lt;/a&gt;
-    &lt;nav&gt;
-      &lt;ul&gt;
-        &lt;li class="topmenu-btn"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="topmenu-btn"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="topmenu-btn"&gt;Support&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="topmenu-btn" id="topmenu-dlbtn"&gt;&lt;a href=""&gt;Download&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/header&gt;</code></pre>
     </td>
     <td>
-      <strong>코드 B</strong>
+      <strong>CSS B</strong>
       <pre><code>body {
   font-family: Pretendard, sans-serif;
   font-size: 1rem;
@@ -129,21 +149,9 @@ nav a {
   color: #fff;
 }
 </code></pre>
-      <pre><code>&lt;header&gt;
-  &lt;div id="topmenu"&gt;
-    &lt;a href="index.html"&gt;&lt;img src="./img/Logo-fin.png" alt="HODU Logo"&gt;&lt;/a&gt;
-    &lt;nav&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Support&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#" id="topmenu-dlbtn"&gt;Download&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/header&gt;</code></pre>
     </td>
   </tr>
 </table>
+
 
 
