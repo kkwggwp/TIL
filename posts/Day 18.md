@@ -30,12 +30,8 @@ public class Question {
 `1004, false, 197`
 
 ## 3. 에러가 발생하는 부분을 고쳐보세요
-
-<table>
-  <tr>
-    <td>
-<h3>문제</h3>
-<pre><code>
+### 문제
+```
 public class Question {
     public static void main(String args[]) {
         // 에러가 발생하는 부분을 고쳐보세요.
@@ -44,13 +40,9 @@ public class Question {
         float c = 1.23d;
     }
 }
-</code></pre>
-
-    </td>
-    <td>
-
-<h3>수정</h3>
-<pre><code>
+```
+### 수정
+```
 public class Question {
     public static void main(String args[]) {
         // 에러가 발생하는 부분을 고쳐보세요.
@@ -59,11 +51,7 @@ public class Question {
         float c = 1.23f;
     }
 }
-</code></pre>
-
-    </td>
-  </tr>
-</table>
+```
 
 
 ## 4. 다음 중 기본 자료형(primitive type)이 아닌 것은?
