@@ -31,10 +31,11 @@ public class Question {
 
 ## 3. 에러가 발생하는 부분을 고쳐보세요
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="flex: 1; padding: 10px; border: 1px solid #ddd; margin-right: 10px;">
-    <h3>문제</h3>
-    <pre><code>
+<table>
+  <tr>
+    <td>
+<h3>문제</h3>
+<pre><code>
 public class Question {
     public static void main(String args[]) {
         // 에러가 발생하는 부분을 고쳐보세요.
@@ -43,11 +44,13 @@ public class Question {
         float c = 1.23d;
     }
 }
-    </code></pre>
-  </div>
-  <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
-    <h3>수정</h3>
-    <pre><code>
+</code></pre>
+
+    </td>
+    <td>
+
+<h3>수정</h3>
+<pre><code>
 public class Question {
     public static void main(String args[]) {
         // 에러가 발생하는 부분을 고쳐보세요.
@@ -56,9 +59,12 @@ public class Question {
         float c = 1.23f;
     }
 }
-    </code></pre>
-  </div>
-</div>
+</code></pre>
+
+    </td>
+  </tr>
+</table>
+
 
 ## 4. 다음 중 기본 자료형(primitive type)이 아닌 것은?
 1. int
