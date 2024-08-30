@@ -27,7 +27,7 @@ public class Question {
 }
 ```
 
->1004, false, 197
+> 1004, false, 197
 
 ## 3. 에러가 발생하는 부분을 고쳐보세요
 ### 문제
@@ -53,18 +53,17 @@ public class Question {
 }
 ```
 
-
 ## 4. 다음 중 기본 자료형(primitive type)이 아닌 것은?
 1. int
 2. String
 3. boolean
 4. short
 
->2
+> 2
 
 ## 5. char 타입에 저장할 수 있는 정수 값의 범위는?
 
-`0 ~ 65535`
+> 0 ~ 65535
 
 ## 6. 다음 중 변수를 잘못 초기화한 것을 모두 고르세요
 1. int a = 1;
@@ -72,14 +71,14 @@ public class Question {
 3. char c = ‘Hello’;
 4. byte d = 12345;
 
->2, 3, 4
+> 2, 3, 4
 
 ## 7. 다음 수식의 결과 값과 타입은?
 1. 100 + 10.5
 2. 100 / 5
 3. 10.0 / 5
 
->110.5(double), 20(int), 2.0(double)
+> 110.5(double), 20(int), 2.0(double)
 
 ## 8. ‘가’라는 한글 문자의 유니코드를 찾아서 char 타입의 변수로 만들어봅시다
 ```
