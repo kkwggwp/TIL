@@ -9,6 +9,7 @@ public class Question {
          * serialNo 변수를 선언하는 한 줄의 코드를 적으세요.
          */
         long serialNo = 123456789012345L;
+
         System.out.println(serialNo);
     }
 }
