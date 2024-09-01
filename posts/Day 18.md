@@ -84,6 +84,9 @@ public class Question {
 ```
 public class Question {
     public static void main(String args[]) {
+        char Ga = '가';
+        int uni = Ga;
+        System.out.println(Ga);
         char koreanCharacterGa = '\uAC00';
 
         System.out.println(koreanCharacterGa);
