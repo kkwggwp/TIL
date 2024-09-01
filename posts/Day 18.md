@@ -84,13 +84,14 @@ public class Question {
 ```
 public class Question {
     public static void main(String args[]) {
-        char Ga = '가';
-        int uni = Ga;
-        System.out.println(Ga);
-        char koreanCharacterGa = '\uAC00';
+        char charGa = '가';
+        int intGa;
 
-        System.out.println(koreanCharacterGa);
+        intGa = charGa;
+        System.out.println(intGa);
 
+        char charKoreanGa = '44032';
+        System.out.println(charKoreanGa);
     }
 }
 ```
