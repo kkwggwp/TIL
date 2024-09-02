@@ -100,24 +100,10 @@ public class Question {
 ```
 public class ChangeNumbers {
     public static void main(String[] args) {
-        int x = 1;
-        int y = 20;
-        int z = 300;
-
-        // 코드를 작성해주세요
-        int temp;
-
-        temp = x;
+        int temp = x;
         x = y;
-        y = temp;
-
-        temp = y;
         y = z;
         z = temp;
-
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
-        System.out.println("z = " + z);
     }
 }
 
