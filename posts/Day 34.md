@@ -50,3 +50,43 @@ ORDER BY FACTORY_ID
 SELECT COUNT(*)
 FROM ANIMAL_INS;
 ```
+
+
+## 3. IS NULL
+### 3.1
+
+예시 테이블 및 구조는 1.1과 같음
+
+동물 보호소에 들어온 동물 중, 이름이 있는 동물의 ID를 조회하는 SQL 문을 작성해주세요. 단, ID는 오름차순 정렬되어야 합니다.
+
+```
+SELECT ANIMAL_ID
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL
+ORDER BY ANIMAL_ID;
+```
+
+### 3.2
+
+예시 테이블 및 구조는 1.1과 같음
+
+동물 보호소에 들어온 동물의 이름은 몇 개인지 조회하는 SQL 문을 작성해주세요. 이때 이름이 NULL인 경우는 집계하지 않으며 중복되는 이름은 하나로 칩니다.
+
+```
+SELECT COUNT(DISTINCT NAME)
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL;
+```
+
+## 4. JOIN
+### 4.1
+
+천재지변으로 인해 일부 데이터가 유실되었습니다. 입양을 간 기록은 있는데, 보호소에 들어온 기록이 없는 동물의 ID와 이름을 ID 순으로 조회하는 SQL문을 작성해주세요.
+
+```
+SELECT o.ANIMAL_ID, o.NAME
+FROM ANIMAL_INS AS i RIGHT JOIN ANIMAL_OUTS AS o
+    ON i.ANIMAL_ID = o.ANIMAL_ID
+WHERE i.ANIMAL_ID IS NULL
+ORDER BY o.ANIMAL_ID, o.NAME;
+```
